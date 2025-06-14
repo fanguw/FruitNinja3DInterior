@@ -1,0 +1,29 @@
+{
+    "opacity_threshold": 0.1,
+    "rotation_degree": [
+        0.0
+    ],
+    "rotation_axis": [
+        0
+    ],
+    "grid_lim": 1.0,
+    "particle_filling": {
+        "n_grid": 160,
+        "density_threshold": 1.0,
+        "search_threshold": 1,
+        "search_exclude_direction": 2,
+        "ray_cast_direction": 3,
+        "max_particles_num": 19000000,
+        "max_partciels_per_cell": 1,
+        "smooth": true,
+        "visualize": true,
+        "boundary": [
+            0.51,
+            1.50,
+            0.57,
+            1.43,
+            0.51,
+            1.49
+        ]
+    }
+}

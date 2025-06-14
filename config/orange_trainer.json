@@ -1,0 +1,17 @@
+{
+  "total_epochs": 7000,
+  "vertical_sd_model": "stabilityai/stable-diffusion-2-depth",
+  "horizontal_sd_model": "stabilityai/stable-diffusion-2-depth",
+  "views_per_vertical_epoch": 30,
+  "views_per_horizontal_epoch": 50,
+  "density_every": 10,
+  "knn_smooth_every": 8,
+  "voxel_smooth_every": 21,
+  "horizontal_steps": 70,
+  "knn_k": 32,
+  "voxel_grid_size": [
+    128,
+    128,
+    128
+  ]
+}
