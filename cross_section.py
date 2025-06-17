@@ -1,3 +1,16 @@
+import os
+import sys
+
+# The directory containing THIS script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Add project root (for utils)
+sys.path.append(script_dir)
+
+# Add gaussian-splatting (for scene, etc)
+gs_dir = os.path.join(script_dir, "gaussian-splatting")
+sys.path.append(gs_dir)
+
 import torch
 from scene.cameras import Camera as GSCamera
 import numpy as np

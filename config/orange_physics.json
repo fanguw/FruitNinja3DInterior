@@ -7,6 +7,17 @@
         0
     ],
     "grid_lim": 1.0,
+    "init_radius": 3.6,
+    "mpm_space_vertical_upward_axis": [
+        0,
+        -1,
+        0
+    ],
+    "mpm_space_viewpoint_center": [
+        1,
+        1,
+        1
+    ],
     "particle_filling": {
         "n_grid": 160,
         "density_threshold": 1.0,

@@ -171,9 +171,6 @@ def get_camera_view(
         fovx = focal2fov(raw_camera["fx"], width)
         fovy = focal2fov(raw_camera["fy"], height)
 
-        print("--------camera---------")
-        print(raw_camera)
-
         return GSCamera(
             colmap_id=0,
             R=R,

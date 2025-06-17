@@ -67,7 +67,7 @@ If already cloned:
 git submodule update --init --recursive
 ```
 
-### 2. Set up Python environment
+### 2. Set up Python/Conda environment (CUDA 11.8)
 ```
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -95,13 +95,13 @@ This will produce gs_fill.ply in the specified output directory.
 Use the generated gs_fill.ply for re-training:
 ```
 python train_orange_demo.py \
-  --config ./config/orange_train.json \
-  --model_path ./outputs \
+  --model_path ./config/orange_demo \
   --physics_config ./config/orange_physics.json \
   --output_path ./outputs \
-  --debug \
-  --gs_path ./outputs/gs_fill.ply \
-  --gs_ori_path ./orange_raw.ply
+  --white_bg True \
+  --train \
+  --gs_path ./orange_filled.ply \
+  --gs_ori_path ./orange_raw.ply 
 ```
 
 ## Fine-tuning Stable Diffusion Depth Model
@@ -145,11 +145,10 @@ Follow the Diffusers Dreambooth guide to fine-tune the depth model with your dat
 
 5. **Update your configuration**
 
-Once fine-tuning is complete, you can specify your new model ID in your config file. For example, in /config/orange_trainfer.config:
-
+Once fine-tuning is complete, you can specify your new model ID in train_orange_demo.py script. For example:
 ```
-  "vertical_sd_model": "stabilityai/stable-diffusion-2-depth",
-  "horizontal_sd_model": "stabilityai/stable-diffusion-2-depth"
+  "SD_MODEL_VERTICAL": "stabilityai/stable-diffusion-2-depth",
+  "SD_MODEL_HORIZONTAL": "stabilityai/stable-diffusion-2-depth"
 ```
 Replace these values with your own fine-tuned model IDs if you have uploaded them to the Hugging Face Hub or a local path.
 
