@@ -90,7 +90,7 @@ def one_step_sds_orange(image, depth, total_epochs, pipe, view_cut):
         optimizer.zero_grad()
         step_ratio = min(1, e / total_epochs)
         grad = pipe.get_sds_latent(
-            f"a photo of the {view_cut} cross section of a pomegranate, detailed",
+            f"a photo of the {view_cut} cross section of an orange, detailed",
             image=image_tensor,
             depth_map=depth,
             strength=0.1,
