@@ -1,3 +1,6 @@
 [submodule "gaussian-splatting"]
 	path = gaussian-splatting
 	url = https://github.com/fanguw/gaussian-splatting
+[submodule "diffusers"]
+	path = diffusers
+	url = https://github.com/fanguw/diffusers.git
